@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0; " /> -->
+    <title>Shape 塑健身</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/apple-icon-120x120.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <style>
+        body {
+            background: #fff;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+        }
+
+        .wrapper {
+            max-width: 1024px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: #000;
+            position: fixed;
+            width:100%;
+            z-index: 99;
+        }
+        .text-center{
+            text-align: center;
+        }
+        .toplogo {
+            height: 80px;
+            cursor: pointer;
+        }
+
+        .list-unstyled {
+            margin: 0;
+            padding: 0;
+        }
+
+        .list-unstyled li {
+            list-style: none;
+            text-decoration: none;
+        }
+
+        nav {
+            padding: 10px 0px;
+            
+                    }
+
+        nav ul {
+            justify-content: space-between;
+            
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 20px 10PX ;
+            color: #fff;
+            font-size: 25px;
+        }
+
+         nav ul li.active a,nav ul li a:hover {
+            color: #ca0000;
+            text-decoration: none;
+        }
+        /* @media screen and (min-width: 900px){
+            
+            nav ul li a{
+                padding: 20px 20PX ;
+	}
+     } */
+
+        .d-flex {
+            display: flex;
+        }
+
+        .position-absolute {
+            position: absolute;
+        }
+
+        .transition {
+            transition: .5s;
+        }
+        main{
+            padding-top: 100px;
+        }
+
+        ul, li{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        }
+        .transition{
+        transition:all .5s;
+        }
+        .slide{
+        width:100%;
+        overflow: hidden;
+        height:500px;
+        background: #000;
+        position: relative;
+        }
+        @media screen and (max-width: 1024px){
+            .slide{
+                height: 50vw;
+            }
+        }
+        .slide ul.slide_img{
+        left:0;
+        position: absolute;
+        /*width:3000px;*/
+        z-index: 1;
+        margin:0;
+        padding:0;
+        }
+        .slide ul.slide_img li{
+        width:1024px;
+        float:left;
+        height:500px;
+        list-style: none;
+        }
+        .slide ul.slide_img li img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        }
+        .slide ul.slide_node{
+        position: absolute;
+        left:0;
+        bottom:10px;
+        width:100%;
+        text-align: center;
+        z-index: 10;
+        }
+        .slide ul.slide_node li{
+        margin:0 5px;
+        display: inline-block;
+        cursor: pointer;
+        width:16px;
+        height:16px;
+        border-radius: 50%;
+        border:1px solid #fff;
+        }
+        .slide ul.slide_node li:hover, .slide ul.slide_node li.active{
+        background: #fff;
+        }
+        .dir_btn{
+        color:#fff!important;
+        position: absolute;
+        top:50%;
+        margin-top: -12px;
+        z-index: 98;
+        font-size: 50px;
+        cursor: pointer;
+        opacity: .6;
+        
+        }
+        .dir_btn:hover{
+        text-decoration: none;
+        color:#fff !important;
+        opacity: .9;
+        }
+
+        .glyphicon-chevron-left{
+        left:50px; 
+        }
+        .glyphicon-chevron-right{
+        right:50px; 
+        }
+        .we {
+            color: #ca0000;
+        }
+
+        footer {
+            margin-top: 20px;
+            background: #000;
+            width: 100%;
+            color: #fff;
+        }
+        .other{
+            padding-top: 25px;
+        }
+        .other ul li{
+            padding-bottom: 2px;
+            padding-left: 35px;
+        }
+        .other ul li a{
+            color: #fff;
+        }
+
+        .info{
+            font-size: 25px;
+           
+        }
+        .as{
+            text-decoration: none;
+           
+        }
+
+        .info ul li a{
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .info ul li a:hover{
+            color:#ca0000;
+        }
+        /* .qr{
+            text-align: center;
+            font-size: 15px;
+            padding-left:130px;
+        }
+        .qr img{
+            width: 120px;
+            height: 120px;
+        } */
+        .copyright{
+            font-size: 15px;
+            text-align: center;
+        }
+        .copyright img{
+            width:500px;
+        }
+        .last{
+            justify-content: center;
+        }
+        
+   #goTop{
+    position: fixed;
+    right:20px;
+    bottom:20px;
+    border:1.5px solid #fff;
+    border-radius: 100%;
+    background: #000;
+    color: #ca0000;
+   }
+   .about {
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 20px;
+            background: #000;
+        }
+
+        .about img {
+            width: 100%;
+            margin: 15px 0;
+        }
+        .classes{
+            flex-wrap: wrap;
+        }
+        .classes img{
+            width: 500px;
+            height: 500px;
+            margin-bottom: 5px;
+            padding-right: 5px;
+            opacity: .8;
+            transform: scale(.9);
+
+        }
+        @media screen and (max-width: 1024px){
+            .classes img{
+                
+            }
+        }
+        .classes img:hover{
+            opacity: 1;
+            transition: .4s;
+            transform: scale(1); 
+        }
+        @media screen and (min-width: 1000px){ 
+            .classes img{
+               
+	}
+     }
+        .city{
+            flex-wrap: wrap;
+        }
+        .city img{
+            width: 500px;
+            height: 500px;
+            margin-bottom: 10px;
+            padding-right: 5px;
+            opacity: .8;
+        }
+        .city img:hover{
+            opacity: 1;
+            transition: .5s;
+        }
+        h1{
+            text-align: center;
+            font-weight: bold;
+            font-size: 50px;
+            color:#ca0000;
+            padding: 10px 0;
+        }
+        .h2{
+            text-align: center;
+            margin: -20px 0 ;
+        }
+        h2{
+            color:#ca0000;
+            background:#000 ;
+            width: 200px;
+            padding: 10px 0;
+            display: inline-block;
+            font-size: 30px;
+            text-align: center;
+        }
+        #page1{
+            color: #fff;
+            width: 100% ;
+        }
+        #page2{
+            background: #fff;
+        }
+        .h1{
+            color: #000 ;
+        }
+        .h2 img{
+            width: 50%!important;
+        }
+    </style>
+
+</head>
+</head>
+
+<body>
+    <header>
+        <nav class="wrapper main-nav">
+            <ul id="nav" class="list-unstyled d-flex">
+                <li><a href="#page1 ">關於Shape</a></li>
+                <li><a href="#page2">預約課程</a></li>
+                <a href="shape.html"><img class="toplogo" src="images/h logo.png" alt=""></a>
+                <li><a href="#page3">營業地點</a></li>
+                <li><a href="myshape.html">我的Shape</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="">
+        <video class="video" controls loop autoplay muted poster="images/video.jpg" width="100%">
+            <source src="shape90s.mp4" type="video/mp4" />
+        </video>
+        <div class="slide wrapper">
+            <a class="dir_btn glyphicon glyphicon-chevron-left" id="left"></a>
+            <a class="dir_btn glyphicon glyphicon-chevron-right" id="right"></a>
+            <ul class="slide_img transition" id="slide_img">
+                <!-- <li><img src="images/slide1.jpeg" alt=""></li>
+                          <li><img src="images/slide2.jpeg" alt=""></li>
+                          <li><img src="images/slide3.jpeg" alt=""></li> -->
+            </ul>
+            <ul class="slide_node" id="slide_node">
+
+            </ul>
+        </div>
+    </main>
+    <div class="scroll_con " id="page1"> 
+            <div class="about wow slideInLeft">
+                <h1>關於Shape 塑健身</h1>
+                <p>Shape是提供多種專業團體和私教課程的健身潮牌，主打高品質場館和按次付費。<br> 我們的社群不滿足於生活現狀，勇於挑戰身體和靈魂的邊界，進而激發自身無限的活力。<br><br>今年3月份Shape在北京開出第一家店鋪，截至目前已經在北京開出共7家店鋪共計11個功能操房，<br>   全部位於城市地標商圈。
+                    <span class="we">#WE ARE LIMITLESS# </span> 是Shape會員的座右銘。<br><br>來，加入我們，進無止境。
+                </p>
+                <img class=" wrapper" src="images/about.jpg" alt="">
+              <div class="h2 wow slideInRight">
+                <div class="h2 py-5">
+                    <h2 >智能化工作室</h2>
+                </div><br>
+                <p class="py-3">
+                    驅動良好數據的是Shape豐富的課程，時尚潮流的店鋪和獨特的科技元素。<br> Shape全程監控和記錄會員的所有運動數據，包括心率，燃脂;<br><img class="rank py-5" src="images/cal.png" >
+                    <br>並通過獨特的三維體測儀記錄和儲存會員身體的階段性數據，<br>   包括基礎心率，基礎代謝率，體脂，體態以及其他健康狀態。<br> <img class="rank py-5"src="images/641.jpeg" alt="">
+                    <br>根據這些會員身體數據和鍛鍊<br> 歷史數據，Shape對會員進行課程推薦、飲食建議和生活習慣的建議，<br> 並逐漸將健身產品從店舖內擴展到家庭場景。
+                </p>
+                <img class="rank py-5" src="images/bike.png" alt="">
+            </div>
+        </div>
+        <div id="page2" class="wrapper full_bg ">
+            <div class="h1 wow slideInLeft">
+               <h1>預約課程</h1>
+               <div class="classes d-flex">
+                    <a href=""> <img src="images/c.png" alt=""></a>
+                    <a href=""> <img src="images/bd.png" alt=""></a>
+                    <a href=""> <img src="images/p.png" alt=""></a>
+                    <a href=""> <img src="images/d.png" alt=""></a>
+              </div>
+         </div>
+        </div>
+        <div id="page3" class="wrapper wow slideInRight">
+            <h1>營業地點</h1>
+            <div class="city d-flex ">
+                <a href=""> <img src="images/t.png" alt=""></a>
+                <a href=""> <img src="images/b.png" alt=""></a>
+                <a href=""> <img src="images/h.png" alt=""></a>
+                <a href=""> <img src="images/m.png" alt=""></a>
+            </div>
+        </div>
+    </div><!-- scroll_con -->
+
+
+    <footer>
+        <div class="big wrapper">
+            <div class="other d-flex">
+                <div class="list-unstyled info">
+                    <ul class="as d-flex">
+                        <li><a href="q&a.html">常見問題</a></li>
+                        <li><a href="https://36kr.com/p/5145138.html"target="_blank">媒體報導</a></li>
+                        <li><a href="https://www.zhipin.com/gongsi/5f7c2484c52b3e831nB-2N28Ew~~.html" target="_blank">招聘消息</a></li>
+                        <li> <a href="mailto:ransu@shape.vip">
+                                Email to Shape</a></li>
+                        <li>
+                        <li>電話: 400-815-1503</li>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="last d-flex">
+                <nav class=" copyright">
+                   <a href="shape.html"> <img class="py-3" src="images/head logo.jpg" alt=""></a>
+                    <p>
+                        Copyright © 2018 Shape 塑健身 All Right Reserved.
+                    </p>
+                </nav>
+            </div>
+        </div>
+
+    </footer>
+    <a class="btn btn-primary" id="goTop"><i class="glyphicon glyphicon-chevron-up"></i></a>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/plugins/jquery.nav.js"></script>
+    <script>
+        $("#goTop").click(function () {
+            //$(window).scrollTop(0);
+            $('html,body').animate({
+                scrollTop: 0
+            }, 700);
+        });
+        var slide = 0;
+        var sliderWidth = 1024;
+        var sliders = ["slide1.png", "slide2.png", "slide3.png"];
+        var slideCount = sliders.length;
+
+        sliderAppend();
+        function sliderAppend() {
+            var sliderContent = "";
+            var sliderDot = "";
+            $("#slide_img").width(sliderWidth * slideCount + "px")
+            for (i = 0; i < slideCount; i++) {
+                sliderContent += "<li><img src='images/" + sliders[i] + "'></li>";
+                sliderDot += "<li></li>";
+            }
+            $("#slide_img").append(sliderContent);
+            $("#slide_node").append(sliderDot);
+            $("#slide_node li").eq(0).addClass("active");
+        }
+        function goSlider(slide) {
+            width = 0 - sliderWidth * slide + "px";
+            $(".slide_img").css("left", width);
+            $("#slide_node li").eq(slide).addClass('active').siblings().removeClass();
+        }
+        $(".slide_node li").hover(function () {
+            slide = $(this).index();
+            goSlider(slide);
+        });
+        $("#left").click(function () {
+            if (slide - 1 >= 0) {
+                slide = slide - 1;
+
+            } else {
+                slide = slideCount - 1;
+            }
+            goSlider(slide);
+        });
+        $("#right").click(function () {
+            if (slide + 1 < slideCount) {
+                slide = slide + 1;
+
+            } else {
+                slide = 0;
+            }
+            goSlider(slide);
+        });
+        //timer
+        var autoSlide = setInterval(slideTimer, 1500);
+
+        function slideTimer() {
+            slide = slide >= (slideCount - 1) ? 0 : slide + 1;
+            goSlider(slide);
+        }
+        $(".slide").hover(function () {
+            clearInterval(autoSlide);
+        }, function () {
+            autoSlide = setInterval(slideTimer, 3500);
+        })
+        $("#goTop").click(function () {
+            //$(window).scrollTop(0);
+            $('html,body').animate({
+                scrollTop: 0
+            }, 700);
+        });
+        $("#nav").onePageNav({
+            currentClass: 'active',
+            changeHash: false,
+            scrollSpeed: 5,
+            scrollThreshold: 10,
+            filter: '',
+            easing: 'swing',
+            begin: function () {
+                //I get fired when the animation is starting
+            },
+            end: function () {
+                //I get fired when the animation is ending
+            },
+            scrollChange: function ($currentListItem) {
+                //I get fired when you enter a section and I pass the list item of the section
+            }
+        }); 
+    </script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+    <script src="wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    
+</body>
+
+</html>

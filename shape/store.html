@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shape 塑健身</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="normalize.css">
+    <style>
+        body {
+            background: #fff;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+        }
+
+        .wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: #000;
+            margin-bottom: 20px;
+            position: fixed;
+            width: 100%;
+            z-index: 99;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .toplogo {
+            height: 80px;
+            cursor: pointer;
+        }
+
+        .list-unstyled {
+            margin: 0;
+            padding: 0;
+        }
+
+        .list-unstyled li {
+            list-style: none;
+            text-decoration: none;
+        }
+
+        nav {
+            padding: 10px 0px;
+
+        }
+
+        nav ul {
+            justify-content: space-between;
+
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 20px 0PX;
+            color: #fff;
+            font-size: 25px;
+        }
+
+        nav ul li.active a,
+        nav ul li a:hover {
+            color: #ca0000;
+            text-decoration: none;
+        }
+
+        .d-flex {
+            display: flex;
+        }
+
+        .position-absolute {
+            position: absolute;
+        }
+
+        .transition {
+            transition: .5s;
+        }
+ 
+        .city{
+            padding-top: 130px;
+            flex-wrap: wrap;
+        }
+        .city img{
+            width: 500px;
+            height: 500px;
+            margin-bottom: 10px;
+            padding-right: 5px;
+            opacity: .8;
+        }
+        .city img:hover{
+            opacity: 1;
+            transition: .5s;
+        }
+
+        .we {
+            color: #ca0000;
+        }
+
+        footer {
+            font-weight: bold;
+            background: #000;
+            width: 100%;
+            color: #fff;
+
+        }
+
+        footer img {
+            width: 100%;
+        }
+
+        .big {
+            display: flex;
+        }
+
+        .other {
+            display: flex;
+            padding-top: 25px;
+        }
+
+        .other ul li {
+            padding-bottom: 2px;
+        }
+
+        .other ul li a {
+            color: #fff;
+        }
+
+        .other img {
+            width: 70px;
+            height: 70px;
+            margin-left: 15px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="wrapper">
+            <ul class="list-unstyled d-flex">
+                <li><a href="about.html">關於Shape</a></li>
+                <li ><a href="classes.html">預約課程</a></li>
+                <a href="shape.html"><img class="toplogo" src="images/h logo.png" alt=""></a>
+                <li class="active"><a href="store.html">營業據點</a></li>
+                <li><a href="myshape.html">我的Shape</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="wrapper">
+            <div class="city d-flex ">
+                <div class="t1"><a href=""> <img  src="images/t.png" alt=""></a></div>
+                <div class="b1"><a href=""> <img  src="images/b.png" alt=""></a></div>
+                <div class="h1"><a href=""> <img  src="images/h.png" alt=""></a></div>
+                <div class="m1"><a href=""> <img  src="images/m.png" alt=""></a></div>
+                
+            </div>
+    </main>
+    <footer>
+        <div class="big wrapper">
+            <nav class=" copyright">
+                <img class="py-3" src="images/head logo.jpg" alt="">
+                <p>
+                    Copyright © 2018 Shape 塑健身 All Right Reserved.
+                </p>
+            </nav>
+            <div class="other">
+                <div class="list-unstyled info">
+                    <ul>
+                        <li><a href="">常見問題</a></li>
+                        <li><a href="">媒體報導</a></li>
+                        <li><a href="">招聘消息</a></li>
+                    </ul>
+                </div>
+                <div class="list-unstyled info">
+                    <ul>
+                        <li> <a href="mailto:ransu@shape.vip">
+                                Email to Shape</a></li>
+                        <li>電話: 400-815-1503</li>
+                        <li>手機掃碼關注<span class="we"> Shape</span></li>
+                    </ul>
+                </div>
+                <img src="images/code.png" alt="">
+            </div>
+        </div>
+
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
+    <script>
+        var slideNo = 0;
+        var slideWidth = 800;
+        var slideArray = ["slide1.png", "slide2.png", "slide3.png"];
+        var slideCount = slideArray.length;
+        for ($i = 0; $i < slideCount; $i++) {
+            $("#sliderWrap").append(`<li><img src="images/${slideArray[$i]}" alt=""></li>`);
+            $("#pages").append("<li></li>");
+        }
+
+
+        console.log(slideCount);
+        function goToSlide() {
+            $(".pages li").eq(slideNo).css("background", "#fff")
+                .siblings().css("background", "transparent")
+            $("#sliderWrap").css("left", (0 - slideNo * slideWidth));
+        }
+        $("#goNext").click(function () {
+            slideNo = slideNo + 1;
+            if (slideNo >= slideCount) slideNo = 0;
+
+            goToSlide();
+        });
+        $("#goPrev").click(function () {
+            slideNo = slideNo - 1;
+            if (slideNo < 0) slideNo = (slideCount - 1);
+
+            goToSlide();
+        });
+        $(".pages li").eq(0);
+        $(".pages li").hover(function () {
+            var slideMove = "";
+            slideNo = $(this).index();
+            goToSlide();
+        });
+    </script>
+</body>
+
+</html>

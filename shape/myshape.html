@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shape 塑健身</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/apple-icon-120x120.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <style>
+        body {
+            background: #fff;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: #000;
+            margin-bottom: 20px;
+            position: fixed;
+            width: 100%;
+            z-index: 99;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .toplogo {
+            height: 80px;
+            cursor: pointer;
+        }
+
+        .list-unstyled {
+            margin: 0;
+            padding: 0;
+        }
+
+        .list-unstyled li {
+            list-style: none;
+            text-decoration: none;
+        }
+
+        nav {
+            padding: 10px 0px;
+
+        }
+
+        nav ul {
+            justify-content: space-between;
+
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 20px 0PX;
+            color: #fff;
+            font-size: 25px;
+        }
+
+        nav ul li.active a,
+        nav ul li a:hover {
+            color: #ca0000;
+            text-decoration: none;
+        }
+
+        .d-flex {
+            display: flex;
+        }
+
+        .position-absolute {
+            position: absolute;
+        }
+
+        .transition {
+            transition: .5s;
+        }
+        main{
+            width: 50%;
+        }
+        .shape {
+            padding-top: 130px;
+        }
+
+        .shape img {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .my {
+            background: #000;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+        .hov{
+            color: #fff;
+        }
+/*  
+        .hov:hover{
+            color: #ca0000;
+        } */
+    
+       .score {
+            border-bottom: 1px solid #fff;
+            padding: 0 35px;
+            padding-top:10px;
+            font-weight: bold;
+            font-size: 25px;
+        }
+        .score:hover{
+            color:#ca0000;
+        }
+        .score a{
+            text-decoration: none;
+        }
+  
+    .name{
+        color: #ccc;
+        float: left;
+    }
+        .numb {
+            padding-left:330px;
+            color: #fff;
+            float: right;
+        }
+        .score img {
+            width: 40px;
+            height: 45px;
+            padding-top:15px;
+        }
+
+        .we {
+            color: #ca0000;
+        }
+
+        footer {
+            margin-top: 20px;
+            background: #000;
+            width: 100%;
+            color: #fff;
+        }
+        .other{
+            padding-top: 25px;
+        }
+        .other ul li{
+            padding-bottom: 2px;
+            padding-left: 35px;
+        }
+        .other ul li a{
+            color: #fff;
+        }
+
+        .info{
+            font-size: 25px;
+           
+        }
+        .as{
+            text-decoration: none;
+           
+        }
+
+        .info ul li a{
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .info ul li a:hover{
+            color:#ca0000;
+        }
+        /* .qr{
+            text-align: center;
+            font-size: 15px;
+            padding-left:130px;
+        }
+        .qr img{
+            width: 120px;
+            height: 120px;
+        } */
+        .copyright{
+            font-size: 15px;
+            text-align: center;
+        }
+        .copyright img{
+            width:500px;
+        }
+        .last{
+            justify-content: center;
+        }   
+        .img{
+            width: 550px;
+        }
+        .hov:hover{
+            color: #ca0000;
+
+        }
+        .icon{
+            width:5% !important;
+            position: absolute;
+            right: 30px;
+            top:250px;
+        }
+         </style>
+</head>
+
+<body>
+    <header>
+        <nav class="wrapper">
+            <ul class="list-unstyled d-flex">
+                <li><a href="shape.html#pag1">關於Shape</a></li>
+                <li><a href="shape.html#pag2">預約課程</a></li>
+                <a href="shape.html"><img class="toplogo" src="images/h logo.png" alt=""></a>
+                <li><a href="shape.html#page3">營業地點</a></li>
+                <li class="active"><a href="myshape.html">我的Shape</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="wrapper">
+        <div class="shape wow slideInLeft">
+            <img src="images/master.png" alt="">
+            <a href=""> <img class=icon src="images/edit.png" ></div></a>
+        <div class="my wow slideInRight">
+            <div class="score">
+                <a class="d-flex hov"href="">
+                    <p> 我的積分</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p>650000</p> 
+         
+            </div>
+            <div class="score">
+                <a class="d-flex hov"href="">
+                    <p> 課程使用</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <p>1300次</p> 
+                
+                </a>
+            </div>
+            <div class="score ">
+                <a class="d-flex hov"href="">
+                    <p> 體檢報告</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <p>良好</p> 
+           
+                </a>
+            </div>
+            <div class="score">
+                <a class="d-flex hov" href="">
+                    <p>活動獎勵</p>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p>查看</p>
+               
+                </a>
+            </div>
+        </div>
+        </div>
+
+    </main>
+    <footer>
+            <div class="big wrapper">
+                <div class="other d-flex">
+                    <div class="list-unstyled info">
+                        <ul class="as d-flex">
+                            <li><a href="q&a.html">常見問題</a></li>
+                            <li><a href="https://36kr.com/p/5145138.html"target="_blank">媒體報導</a></li>
+                            <li><a href="https://www.zhipin.com/gongsi/5f7c2484c52b3e831nB-2N28Ew~~.html"target="_blank">招聘消息</a></li>
+                            <li> <a href="mailto:ransu@shape.vip">
+                                    Email to Shape</a></li>
+                            <li>
+                            <li>電話: 400-815-1503</li>
+                            </li>
+                        </ul>
+    
+                    </div>
+                </div>
+                <div class="last d-flex">
+                    <nav class=" copyright">
+                       <a href="shape.html"> <img class="py-3" src="images/head logo.jpg" alt=""></a>
+                        <p>
+                            Copyright © 2018 Shape 塑健身 All Right Reserved.
+                        </p>
+                    </nav>
+                    <!-- <div class="qr">
+                                    <p>  掃碼關注<span class="we"> Shape</span></p>
+                                    <img src="images/code.png" alt="">
+                                </div> -->
+    
+                </div>
+            </div>
+    
+        </footer>
+    
+    <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+    <script src="wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+</body>
+
+</html>
